@@ -8,7 +8,7 @@ def list_comics():
     db = Base(os.path.join(SCRIPT_DIR, 'comics.db'))
     db.create('comic', 'time', mode="open")
     for l in db:
-        print('%s %s' % (l['comic'], l['time']))
+        print(l['comic'], l['time'])
 
 def main():
     list_comics()
